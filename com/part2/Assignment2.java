@@ -17,7 +17,7 @@ public class Assignment2 {
 					matrix[i][j] = (int)(Math.random()*100);
 				}
 				catch(Exception e) {
-					System.out.println(e);
+					e.printStackTrace();
 				}
 				if (matrix[i][j] > max) {
 					max = matrix[i][j];

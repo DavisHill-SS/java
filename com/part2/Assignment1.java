@@ -13,7 +13,7 @@ public class Assignment1 {
 				sum += num;
 			}
 			catch(Exception e) {
-				System.out.println(e);
+				e.printStackTrace();
 			}
 
 		}
