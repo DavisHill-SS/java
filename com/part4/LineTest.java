@@ -10,17 +10,20 @@ public class LineTest {
 	
 	@test
 	public void getSlopeTest() {
-		assertEquals( int(0), line.getSlope());
+		assertEquals( double(0), line.getSlope());
+		assertNotEquals(double(10), line.getSlope());
 	}
 	
 	@test
 	public void getDistanceTest() {
-		assertNotEquals(new Integer(100), line.getDistance());
+		assertEquals( double(0), line.getDistance());
+		assertNotEquals(double(10), line.getDistance());
 	}
 	
 	@test
 	public void getParallelToTest() {
-		assertEquals( false, line.getParallelTo());
+		assertEquals( double(0), line.getParallelTo());
+		assertNotEquals(double(10), line.getParallelTo());
 	}
 	
 

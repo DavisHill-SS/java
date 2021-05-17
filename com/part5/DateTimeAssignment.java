@@ -18,7 +18,7 @@ public class DateTimeAssignment {
 		System.out.println("Birthdate: " + LocalDateTime.now());
 		
 		// Exercise 2
-		LocalDate date = date.with(TemporalAdjuster.previous(DayOfWeek.THURSDAY));
+		//LocalDate date = date.with(TemporalAdjuster.previous(DayOfWeek.THURSDAY));
 		
 		// Exercise 4
 		ZonedDateTime zdt = ZonedDateTime.ofInstant(Instant.now(),
