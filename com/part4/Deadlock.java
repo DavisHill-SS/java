@@ -33,7 +33,7 @@ public class Deadlock {
 						System.out.println("Thread 2 locked s2");
 						Thread.sleep(100);
 						synchronized(s1){
-							System.out.println("Thread 2 locked s2");
+							System.out.println("Thread 2 locked s1");
 						}
 					}
 				}
