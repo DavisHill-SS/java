@@ -7,10 +7,10 @@ public class SampleSingleton {
 	private static Connection conn = null;
 	private static SampleSingleton instance = null;
 	
-	public static SampleSingleton getInstance(Connection sql_conn) {
+	public static synchronized SampleSingleton getInstance(Connection sql_conn) {
 		if (instance == null) {
 			conn = sql_conn;
-			synchronized (Singleton.class) {
+			synchronized (SampleSingleton.class) {
 				if (instance == null) {
 					instance = new SampleSingleton();
 				}

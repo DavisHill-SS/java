@@ -9,24 +9,25 @@ public class Line {
 	}
 	
 	public double getSlope() throws ArithmeticException {
-		if(!(x1==x0)) {
-			return (y1-y0)/(x1-x0);
+		if(x1 == x0) {
+			throw new ArithmeticException();
 		}
-		return 0;
+		return (y1-y0)/(x1-x0);
 		
 	}
 	
 	public double getDistance() {
-		return Math.sqrt(x1-x0)*(x1-x0) + (y1-y0)*(y1-y0));
+		return Math.sqrt((x1-x0)*(x1-x0) + (y1-y0)*(y1-y0));
 	}
 	
 	public boolean parallelTo(Line l) {
-	if(Math.abs(getSlope() - l.getSlope()) < .0001) {
-		return true;
+		if(Math.abs(getSlope() - l.getSlope()) < .0001) {
+			return true;
+		}
+		else {
+			return false;
+			}
 	}
-	else {
-		return false;
-	}
-	}
+	
 	private double x0, x1, y0, y1;
 }
